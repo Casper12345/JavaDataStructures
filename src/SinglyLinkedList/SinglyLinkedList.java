@@ -3,7 +3,7 @@ package SinglyLinkedList;
 import java.util.NoSuchElementException;
 
 /**
- * Singly Linked List Java
+ * Singly Linked List Java.
  */
 public class SinglyLinkedList<T> implements SinglyLinkedListInterface<T> {
 
