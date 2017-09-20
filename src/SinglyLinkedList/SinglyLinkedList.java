@@ -10,12 +10,12 @@ public class SinglyLinkedList<T> implements SinglyLinkedListInterface<T> {
   private Node head;
 
   @Override
-  public void addNodeLeft(T info) {
+  public void addNodeLeft(T element) {
 
     if (head == null) {
-      head = new Node<T>(info, null);
+      head = new Node<T>(element, null);
     } else {
-      head = new Node<T>(info, head);
+      head = new Node<T>(element, head);
     }
   }
 
@@ -35,10 +35,10 @@ public class SinglyLinkedList<T> implements SinglyLinkedListInterface<T> {
   }
 
   @Override
-  public void addNodeRight(T info) {
+  public void addNodeRight(T element) {
 
     if (head == null) {
-      head = new Node<T>(info, null);
+      head = new Node<T>(element, null);
     } else {
 
       Node pointer = head;
@@ -47,7 +47,7 @@ public class SinglyLinkedList<T> implements SinglyLinkedListInterface<T> {
         pointer = pointer.getNextNode();
       }
 
-      pointer.setNextNode(new Node<T>(info, null));
+      pointer.setNextNode(new Node<T>(element, null));
 
     }
 
@@ -141,5 +141,32 @@ public class SinglyLinkedList<T> implements SinglyLinkedListInterface<T> {
     return toReturn;
   }
 
+  public void insertByIndex(T element, int index) {
+
+    int count = 1;
+
+    if (index > size() || index < 0) {
+      throw new IndexOutOfBoundsException("Index is out of bounds");
+    }
+
+    if (head == null) {
+      head = new Node<T>(element, null);
+    }
+
+    if (index == 0) {
+      addNodeLeft(element);
+    } else {
+
+      Node pointer = head;
+
+      while (pointer.getNextNode() != null && index != count) {
+        count++;
+        pointer = pointer.getNextNode();
+      }
+
+      pointer.setNextNode(new Node<T>(element, pointer.getNextNode()));
+
+    }
+  }
 
 }

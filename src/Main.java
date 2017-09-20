@@ -12,6 +12,8 @@ public class Main {
     l.addNodeLeft(3);
     l.addNodeRight(4);
     l.addNodeRight(5);
+    l.addNodeLeft(9);
+    l.addNodeRight(89);
     l.printList();
 
     l.removeNodeLeft();
@@ -32,6 +34,9 @@ public class Main {
     System.out.println(l2.size());
 
 
+    l.insertByIndex(10, 5);
+
+    l.printList();
 
   }
 
