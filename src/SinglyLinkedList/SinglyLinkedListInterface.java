@@ -15,5 +15,8 @@ public interface SinglyLinkedListInterface<T> {
 
   void printList();
 
+  int size();
+
+
 
 }

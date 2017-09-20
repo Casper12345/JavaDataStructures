@@ -18,14 +18,20 @@ public class Main {
 
     l.printList();
 
+    System.out.println(l.size());
+
     SinglyLinkedList<Integer> l2 = new SinglyLinkedList<Integer>();
 
     l2.addNodeRight(2);
     l2.printList();
+    System.out.println(l2.size());
 
     l2.removeNodeLeft();
 
     l2.printList();
+    System.out.println(l2.size());
+
+
 
   }
 

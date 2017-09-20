@@ -9,6 +9,7 @@ public class SinglyLinkedList<T> implements SinglyLinkedListInterface<T> {
 
   private Node head;
 
+  @Override
   public void addNodeLeft(T info) {
 
     if (head == null) {
@@ -18,6 +19,7 @@ public class SinglyLinkedList<T> implements SinglyLinkedListInterface<T> {
     }
   }
 
+  @Override
   public T removeNodeLeft() {
 
     T toReturn;
@@ -32,6 +34,7 @@ public class SinglyLinkedList<T> implements SinglyLinkedListInterface<T> {
     return toReturn;
   }
 
+  @Override
   public void addNodeRight(T info) {
 
     if (head == null) {
@@ -50,6 +53,7 @@ public class SinglyLinkedList<T> implements SinglyLinkedListInterface<T> {
 
   }
 
+  @Override
   public T removeNodeRight() {
 
     T toReturn;
@@ -115,5 +119,27 @@ public class SinglyLinkedList<T> implements SinglyLinkedListInterface<T> {
   public void printList() {
     System.out.println(toString());
   }
+
+  @Override
+  public int size() {
+    int toReturn;
+
+    if (head == null) {
+      toReturn = 0;
+    } else {
+
+      Node pointer = head;
+
+      toReturn = 1;
+      while (pointer.getNextNode() != null) {
+        pointer = pointer.getNextNode();
+        toReturn += 1;
+      }
+
+    }
+
+    return toReturn;
+  }
+
 
 }
