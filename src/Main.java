@@ -1,4 +1,5 @@
 import SinglyLinkedList.SinglyLinkedList;
+import binarySearchTree.BinarySearchTree;
 
 /**
  * Created by Casper on 20/09/2017.
@@ -6,37 +7,19 @@ import SinglyLinkedList.SinglyLinkedList;
 public class Main {
 
   public static void main(String[] args) {
-    SinglyLinkedList<Integer> l = new SinglyLinkedList<Integer>();
-    l.addNodeLeft(1);
-    l.addNodeLeft(2);
-    l.addNodeLeft(3);
-    l.addNodeRight(4);
-    l.addNodeRight(5);
-    l.addNodeLeft(9);
-    l.addNodeRight(89);
-    l.printList();
 
-    l.removeNodeLeft();
+    BinarySearchTree<Character> b = new BinarySearchTree<>();
 
-    l.printList();
+    b.add('a');
+    b.add('c');
+    b.add('b');
+    b.add('k');
+    b.add('e');
+    b.add('f');
 
-    System.out.println(l.size());
+    b.printTree("postOrder");
+    System.out.println(b.searchByElement('e'));
 
-    SinglyLinkedList<Integer> l2 = new SinglyLinkedList<Integer>();
-
-    l2.addNodeRight(2);
-    l2.printList();
-    System.out.println(l2.size());
-
-    l2.removeNodeLeft();
-
-    l2.printList();
-    System.out.println(l2.size());
-
-
-    l.insertByIndex(10, 5);
-
-    l.printList();
 
   }
 
