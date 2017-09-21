@@ -1,4 +1,4 @@
-package SinglyLinkedList;
+package singlyLinkedList;
 
 /**
  * Created by Casper on 20/09/2017.

@@ -1,5 +1,4 @@
-import SinglyLinkedList.SinglyLinkedList;
-import binarySearchTree.BinarySearchTree;
+import arrayList.ArrayList;
 
 /**
  * Created by Casper on 20/09/2017.
@@ -8,18 +7,22 @@ public class Main {
 
   public static void main(String[] args) {
 
-    BinarySearchTree<Character> b = new BinarySearchTree<>();
+    ArrayList<Integer> a = new ArrayList<>();
 
-    b.add('a');
-    b.add('c');
-    b.add('b');
-    b.add('k');
-    b.add('e');
-    b.add('f');
+    a.addElement(1);
+    a.addElement(2);
+    a.addElement(3);
+    a.addElement(4);
+    a.addElement(5);
+    a.printArray();
+    a.removeElementByIndex(0);
+    a.printArray();
+    System.out.println(a.size());
+    System.out.println(a.getElementByIndex(0));
 
-    b.printTree("postOrder");
-    System.out.println(b.searchByElement('e'));
+    ArrayList<Integer> b = new ArrayList<>();
 
+    System.out.println(b.getElementByIndex(0));
 
   }
 
