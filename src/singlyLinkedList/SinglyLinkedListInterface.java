@@ -17,6 +17,8 @@ public interface SinglyLinkedListInterface<T> {
 
   int size();
 
+  boolean exists(T info);
+
 
 
 }

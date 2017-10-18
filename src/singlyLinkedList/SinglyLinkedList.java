@@ -170,4 +170,23 @@ public class SinglyLinkedList<T> implements SinglyLinkedListInterface<T> {
   }
 
 
+  public boolean exists(T t) {
+
+    if (head == null) {
+      return false;
+    } else {
+
+      Node pointer = head;
+
+      while (pointer.getNextNode() != null) {
+        if (pointer.getInfo().equals(t)) {
+          return true;
+        }
+
+        pointer = pointer.getNextNode();
+      }
+      return false;
+    }
+  }
+
 }
