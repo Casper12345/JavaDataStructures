@@ -4,11 +4,11 @@ public class Main {
 
   public static void main(String[] args) {
 
-    BubbleSort b = new BubbleSort();
+    BubbleSort2 b = new BubbleSort2();
 
-    int[] arr = {1,2,3,3,4,5,6,6};
+    Integer[] arr = {6,4,1,3,9,5,7,6};
 
-    b.sort(arr);
+    b.bubbleSort(arr);
 
     for (int i : arr) {
       System.out.println(i);
