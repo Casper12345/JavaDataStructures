@@ -17,9 +17,9 @@ public class BinarySearchTree<T> {
       return new Node<T>(element);
     }
 
-    if (node.compareTo(element) == -1) {
+    if (node.compareTo(element) < 0) {
       node.setLeft(insert(node.getLeft(), element));
-    } else if (node.compareTo(element) == 1) {
+    } else if (node.compareTo(element) > 0) {
       node.setRight(insert(node.getRight(), element));
     } else {
       node.setLeft(insert(node.getLeft(), element));
@@ -37,12 +37,12 @@ public class BinarySearchTree<T> {
       return true;
     }
 
-    if (node.compareTo(element) == -1 && node.getLeft() != null && search(element,
+    if (node.compareTo(element) < 0 && node.getLeft() != null && search(element,
         node.getLeft())) {
       return true;
     }
 
-    if (node.compareTo(element) == 1 && node.getRight() != null && search(element,
+    if (node.compareTo(element) > 0 && node.getRight() != null && search(element,
         node.getRight())) {
       return true;
     }

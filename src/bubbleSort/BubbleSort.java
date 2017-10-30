@@ -3,7 +3,7 @@ package bubbleSort;
 public class BubbleSort {
 
 
-  public <E extends Comparable> void bubbleSort(E[] arr) {
+  public <E extends Comparable> void sort(E[] arr) {
 
     E temp;
 
