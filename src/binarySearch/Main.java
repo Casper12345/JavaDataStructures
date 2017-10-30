@@ -10,6 +10,12 @@ public class Main {
 
     System.out.println(b.search(arr, 5));
 
+    BinarySearchGeneric bsg = new BinarySearchGeneric();
+    Character[] arr1 = {'f','g','e','b','a'};
+
+    System.out.println(bsg.search(arr1, 'w'));
+
+
   }
 
 }
