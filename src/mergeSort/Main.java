@@ -14,6 +14,15 @@ public class Main {
 
     Arrays.stream(arr).forEach(System.out::println);
 
+    MergeSortGeneric<String> msg = new MergeSortGeneric<>();
+
+    String[] sa = {"f", "e", "d", "c", "b", "a"};
+
+    msg.mergeSort(sa);
+
+    Arrays.stream(sa).forEach(System.out::println);
+
+
   }
 
 }
