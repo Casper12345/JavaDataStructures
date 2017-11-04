@@ -73,6 +73,7 @@ public class ArrayList<T> {
   public T getElementByIndex(int index) {
 
     if (index < 0 || index > array.length - 1) {
+
       throw new IndexOutOfBoundsException("Index is out of bounds");
     }
 

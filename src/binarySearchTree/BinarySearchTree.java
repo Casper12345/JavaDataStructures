@@ -52,18 +52,18 @@ public class BinarySearchTree<T> {
   }
 
 
-  public void printTree(String order) {
+  public void printTree(Order order) {
 
     switch (order) {
-      case "preOrder":
+      case PREORDER:
         traversePreOrder(root);
         break;
 
-      case "inOrder":
+      case INORDER:
         traverseInOrder(root);
         break;
 
-      case "postOrder":
+      case POSTORDER:
         traversePostOrder(root);
         break;
     }

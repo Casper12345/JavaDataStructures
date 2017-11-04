@@ -15,35 +15,29 @@ public class Node<E> implements Comparable<E> {
     this.element = element;
   }
 
-  public E getElement() {
+  E getElement() {
     return element;
   }
 
-  public Node<E> getLeft() {
+  Node<E> getLeft() {
     return left;
   }
 
-  public Node<E> getRight() {
+  Node<E> getRight() {
     return right;
   }
 
-  public void setLeft(Node<E> left) {
+  void setLeft(Node<E> left) {
     this.left = left;
   }
 
-  public void setRight(Node<E> right) {
+  void setRight(Node<E> right) {
     this.right = right;
   }
 
   @Override
   public int compareTo(@NotNull E o) {
-    if (o.hashCode() > this.element.hashCode()) {
-      return 1;
-    } else if (o.hashCode() < this.element.hashCode()) {
-      return -1;
-    } else {
-      return 0;
-    }
+    return Integer.compare(o.hashCode(), this.element.hashCode());
   }
 
 }

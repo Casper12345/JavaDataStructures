@@ -1,6 +1,6 @@
 package binarySearch;
 
-import org.bouncycastle.util.Arrays;
+import java.util.Arrays;
 
 public class BinarySearch {
 
