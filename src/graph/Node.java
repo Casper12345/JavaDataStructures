@@ -25,6 +25,8 @@ public class Node<E> {
   }
 
   public void addEdge(int weight, Node b) {
+
     edges.add(new Edge(weight, this, b));
+
   }
 }
